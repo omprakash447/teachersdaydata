@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+.homepage {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card1 {
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeInSlide 1s ease forwards;
+    transition: transform 0.3s ease;
+}
+
+.card1 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ccc, #ddd);
+    border: 2px solid #007bff;
+}
+
+.card1 h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #333, #666);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #333;
+}
+
+.card1 p {
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #555, #777);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card1 button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card1 button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a);
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 769px) {
+    .homepage .card1:nth-child(odd) {
+        left: -150px;
+        animation-delay: calc(var(--index) * 0.1s);
+    }
+    .homepage .card1:nth-child(even) {
+        left: 150px;
+        animation-delay: calc(var(--index) * 0.1s);
+    }
+}
+
+@media (max-width: 1024px) {
+    .homepage .card1:nth-child(odd) {
+        left: -100px;
+    }
+    .homepage .card1:nth-child(even) {
+        left: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage .card1 {
+        max-width: 80%;
+        left: 0;
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadeInSlide 1s ease forwards;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .homepage .card1 {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 40px;
+    }
+    .card1 h1 {
+        font-size: 1.2rem;
+    }
+    .card1 p {
+        font-size: 0.85rem;
+    }
+    .card1 button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

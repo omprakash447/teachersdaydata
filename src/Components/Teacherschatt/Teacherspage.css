@@ -1,0 +1,92 @@
+.chat-room {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    min-height: 100vh;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    overflow: hidden;
+}
+
+.message.mine {
+    text-align: right;
+    background-color: #dcf8c6;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+.message.theirs {
+    text-align: left;
+    background-color: #ffffff;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+.messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin-left: auto;
+    background: linear-gradient(135deg, #d4f4dd, #b2e5a0);
+}
+
+.message.teacher {
+    background: linear-gradient(135deg, #e0e0e0, #c4c4c4);
+    align-self: flex-start;
+}
+
+.message.you {
+    background: linear-gradient(135deg, #d4f4dd, #a3d2a1);
+    align-self: flex-end;
+}
+
+.chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    background: #fff;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-form button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a);
+}
